@@ -1,7 +1,8 @@
-const mongoose=require('mongoose')
-const TodosSchema=new mongoose.Schema({
-    todo:String,
-    author: String
+import mongoose from 'mongoose';
+
+const TodosSchema = new mongoose.Schema({
+    task: String,
+    status: String
 })
-module.exports=mongoose.model('todo',TodosSchema)
+module.exports = mongoose.model('todo', TodosSchema)
 

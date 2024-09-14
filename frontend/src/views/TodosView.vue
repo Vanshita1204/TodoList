@@ -1,18 +1,18 @@
 <template>
     <div>
         
-        <input type="text" placeholder="Author" v-model="state.newAuthor">
+        <input type="text" placeholder="Task" v-model="state.newTask">
         <br>
-        <input type="text" placeholder="Todo" v-model="state.newTodo">
+        <input type="text" placeholder="Status" v-model="state.newStatus">
         <br>
         <button @click="newTodo()">New Todo</button>
         <h1>All Todos</h1>
         <div v-for="item in state.todos" :key="item._id">
             <h4>
-                Author: {{ item. author }}
+                Task: {{ item.task }}
             </h4>
             <h4>
-                Todo: {{ item.todo }}
+                Status: {{ item.status }}
             </h4>
             <router-link :to="`/todo/${item._id}`">
 

@@ -3,14 +3,14 @@
         <h1>Editing a Todo</h1>
         <hr>
         <div v-for="item in todo" :key="item._id">
-            <h4>{{item.author}}</h4>
-            <h4>{{item.todo}}</h4>
+            <h4>{{item.status}}</h4>
+            <h4>{{item.task}}</h4>
         </div>
-        <input type="text" placeholder="Author" v-model="state.newAuthor">
-        <span>Test: {{ state.newAuthor }}  </span>
+        <input type="text" placeholder="task" v-model="state.newTask">
+        <span>Test: {{ state.newTask }}  </span>
         <br>
-        <input type="text" placeholder="Todo" v-model="state.newTodo">
-        <span>Test: {{ state.newTodo }}  </span>
+        <input type="text" placeholder="status" v-model="state.newStatus">
+        <span>Test: {{ state.newStatus }}  </span>
         <br>
         <br>
         <button @click="editTodo()">Update Item</button>
